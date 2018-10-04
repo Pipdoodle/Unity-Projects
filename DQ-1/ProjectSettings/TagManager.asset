@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - bed
+  - bookcase
+  - Barrier
+  - Int
+  - Phone
+  - Canvas
+  - Desktop
+  - Dialog_Elements
+  - Diabox
+  - fullText
+  - shortText
+  - speakerText
+  - scoreText
+  - mirror
+  - closet
+  - trashcan
+  - dimmer
+  - Couch
+  - Table
+  - Rug
+  - TV
+  - DR
+  - BR
+  - GR
+  - PR
+  - Locker1
+  - Troph Case
+  - LunchR
+  - Gym
+  - SC
+  - GeoC
+  - CSC
+  - English
+  - HealthO
+  - speakerTextBG
+  - LockerUr
+  - FrontDeskLady
+  - Friend2
+  - Friend3
+  - Friend1
+  - DiningTable
+  - BedRoom
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - player
+  - perspectiveObjects
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: background
+    uniqueID: 4019699307
+    locked: 0
+  - name: player
+    uniqueID: 3309772549
+    locked: 0
+  - name: sprites
+    uniqueID: 1482593817
+    locked: 0

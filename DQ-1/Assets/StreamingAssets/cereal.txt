@@ -1,0 +1,227 @@
+Tag:DiningTable
+ScoreCase:dayOneBreakfast(==1)
+	Then:
+		JumpTo:Table
+	EndThen
+	Else:
+		JumpTo:Eat
+	EndElse
+EndScoreCase
+
+Jump:Table
+	Text:It's the dining table.
+EndJump
+
+Jump:Eat
+dVar:dayOneBreakfast(1)
+Text:  Eating, that's an important thing to do...I guess I should do that...
+Text:  Which cereal should I eat today?
+ScoreCase: smood(>=50)
+	Then:
+		JumpTo:Colorful
+	EndThen
+	Else:
+		JumpTo:Bland
+	EndElse
+EndScoreCase
+EndJump
+
+Jump:Colorful
+	Select:2
+	0:Cheerios
+		JumpTo:Cinnamon
+	1:Corn Flakes
+		JumpTo:Corn
+EndJump
+
+Jump:Bland
+	Select:2
+	0:Sugar Fattener
+		JumpTo:Cinnamon
+	1:Bland Tasteless
+		JumpTo:Corn
+EndJump
+
+Jump:Cinnamon
+	ScoreSwitch:4
+	0:smood(>=70)
+		JumpTo:Cinnamon1
+	1:smood(>=50);and;smood(<70)
+		JumpTo:Cinnamon2
+	2:smood(>=20);and;smood(<50)
+		JumpTo:Cinnamon3
+	3:smood(<20)
+		JumpTo:Cinnamon4
+EndJump
+
+Jump:Cinnamon1
+	Text:Gotta love Cheerios!
+	Text:I eat the cereal.
+	JumpTo:DoneEating
+EndJump
+
+Jump:Cinnamon2
+	Text:Just another sugary cereal...I used to love this... now I guess it's okay.
+	Text:You make the bowl.
+	JumpTo:Pour
+EndJump
+
+Jump:Cinnamon3
+	Text: I can't believe I used to eat this so much and love it.\
+			   It's just cereal...a really sugary one at that.\
+			   It's probably going to make me fat...
+	JumpTo:Pour
+EndJump
+
+Jump:Cinnamon4
+	Text:This is probably just going to make me fat isn't it. Whatever, it's not like there's much hope for me anyway.
+	JumpTo:Pour
+EndJump
+
+Jump:Corn
+	ScoreSwitch:4
+	0:smood(>=70)
+		JumpTo:Corn1
+	1:smood(>=50);and;smood(<70)
+		JumpTo:Corn2
+	2:smood(>=20);and;smood(<50)
+		JumpTo:Corn3
+	3:smood(<20)
+		JumpTo:Corn4
+EndJump
+
+Jump:Corn1
+	Text:You know, corn flakes really aren't as bad as everyone says! They're pretty good!
+	Text:I eat the cereal.
+	JumpTo:DoneEating
+EndJump
+
+Jump:Corn2
+	Text:Corn flakes are kindof bland but hey at least they're a bit healthy!
+	Text:You make the bowl.
+	JumpTo:Pour
+EndJump
+
+Jump:Corn3
+	Text: Why am I even eating this? It's not like it's good... it's just empty calories.
+	JumpTo:Pour
+EndJump
+
+Jump:Corn4
+	Text:It's just empty calories. That's all, it doesn't even taste like anything. Then again, nothing tastes good anymore so may as well. Not like there's any point.
+	JumpTo:Pour
+EndJump
+
+Jump:Pour
+	ScoreSwitch:3
+	0:smood(>=50)
+		JumpTo:Pour1
+	1:smood(>=20);and;smood(<50)
+		JumpTo:Pour2
+	2:smood(<20)
+		JumpTo:Pour3
+EndJump
+
+Jump:Pour1
+	Text:Just got to pour this bowl of cereal and then I can eat it.
+	JumpTo:DoneEating
+EndJump
+
+Jump:Pour2
+	Text:I have to pour this entire bowl[wait=3]
+	This is so much time and effort [wait=7]
+	Do I really even want this? Now I have to get the milk and utensils.
+	JumpTo:FinishBowl
+EndJump
+
+Jump:Pour3
+	Text:I have to pour this entire bowl[wait=3]
+	This is so much time and effort[wait=3]
+	Why am I even doing this? Eating this is just going to make me fat... and it's so much effort.
+	JumpTo:PourMore
+EndJump
+
+Jump:PourMore
+	Text:I'm so tired of this already[wait=3]
+	Pouring.[wait=6]
+	Pouring..[wait=9]
+	Pouring...[wait=15]
+	Do I really even want this? Now I have to get the milk and utensils.
+	JumpTo:FinishBowl
+EndJump
+
+Jump:FinishBowl
+	Text:Got to get the milk[wait=6]
+	Now I have to get utensils[wait=10]
+	Now I can finally sit down and eat...
+	ScoreCase:smood(>=30)
+		Then:
+			JumpTo:DoneEating
+		EndThen
+		Else:
+			JumpTo:Eating
+		EndElse
+	EndScoreCase
+EndJump
+
+Jump:Eating
+	Text:Time to actually eat! Yay.... not really. Do I really want to eat? I guess I'm supposed to.
+	Text:Raising the spoon...[wait=3]
+	Chewing.[wait=9]
+	Chewing..
+	Text:Chewing.[wait=9]
+	Chewing..[wait=12]
+	Chewing...
+	Text:Chewing.[wait=9]
+	Chewing..[wait=12]
+	Chewing...
+	Text:Chewing.[wait=9]
+	Chewing..[wait=12]
+	Chewing...
+	Text:It's finally gone.
+	JumpTo:DoneEating
+EndJump
+
+Jump:DoneEating
+	ScoreSwitch:4
+	0:smood(>=70)
+		JumpTo:Done1
+	1:smood(>=50);and;smood(<70)
+		JumpTo:Done2
+	2:smood(>=20);and;smood(<50)
+		JumpTo:Done3
+	3:smood(<20)
+		JumpTo:Done4
+EndJump
+
+Jump:Done1
+	Text:That was tasty! Now onwards to the rest of the day!
+EndJump
+
+Jump:Done2
+	Text:Guess I'm done with that. Time to do something else.
+EndJump
+
+Jump:Done3
+	Text:Guess that's done with. Time to go face the rest of the day
+EndJump
+
+Jump:Done4
+	Text:Why did I even need to do that? Well, I guess I ate like I was supposed to...
+	Text:I don't even want to think of the amount of calories that had...
+	Text:Anyway, I guess I should go do something now.
+EndJump
+
+Jump:EndEating
+	Text:It's just one meal right? It's just breakfast.\
+	\
+	\
+	It's <b>fine</b>
+
+EndJump
+
+Jump:SkippedEating
+	dVar:lmood(-5)
+	Text:You stop eating.
+EndJump
+EndTag

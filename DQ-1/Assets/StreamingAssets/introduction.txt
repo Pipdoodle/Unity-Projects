@@ -1,0 +1,172 @@
+Tag:splash
+	Text:Everyone always says “A new year is a chance for a new start!”
+	Text:They also like to say "Everyday is a fresh start!" As though one bad day ends and wham, everything's all jolly and good again. 
+	Text:Yeah. Right.
+	Text:Everyday I used to tell myself \
+	Today’s the day! \
+	The day I'll be better. \
+	The day I'll fix myself.\
+	The day I'd *finally* become someone I can be proud of...
+	Text:\
+	\
+	\
+	 <b>Bullshit</b>
+	Text:Like that worked out so well for me. It was the same cycle, over and over again, day after day. And now, here I am again.
+	Text:But still.. maybe...it's a new start to the new school year. If there’s ever a time to finally pull myself together, it’s now.
+	Text:
+	I have to believe.\
+	I will be better
+	Text:Be stronger.
+	Text:I can do this.
+	Text:I...
+	Text:BEEP BEEP BEEP
+	Text:Here's to a new beginning
+
+	Select:2
+	0: Get Up
+		JumpTo:Try1
+	1: Continue Sleeping
+		JumpTo:Cont1
+
+	Jump:Try1
+		dVar:smood(-2)
+		Text:I have to get up now… I don't want to, but I have to! It starts here. Right now. I can do this!
+	EndJump
+
+	Jump:Cont1
+		dVar:smood(-5)
+		Text:I know I said I'd be better, but just 5 more minutes won’t do any harm right? I'm just... tired.
+	EndJump
+
+	ScoreSwitch:2
+	0:smood(>=48)
+		JumpTo:T
+	1:smood(<48)
+		JumpTo:S
+
+	Jump:T
+		Text:I try to open my eyes but it's as though there's suddenly a lead weight weighing my body down.\
+		<i>No... not again...</i>
+	EndJump
+
+	Jump:S
+		Text:I remain in bed, steadfastly ignoring the guilt beginning to curl up in my chest. It was only supposed to be five minutes...
+	EndJump
+
+	Select:2
+	0:Get Up
+		JumpTo:Try2
+	1:Continue Sleeping
+		JumpTo:Cont2
+
+	Jump:Try2
+		dVar: smood(-4)
+		ScoreSwitch:2
+		0:smood(>=43)
+			JumpTo:TT
+		1:smood(<43)
+			JumpTo:ST
+	EndJump
+
+	Jump:Cont2
+		dVar: smood(-10)
+		ScoreSwitch:2
+		0:smood(>=38)
+			JumpTo:TS
+		1:smood(<38)
+			JumpTo:SS
+	EndJump
+
+	Jump:TT
+		Text:Come on! Get up. Get up. I need to get up! Everyone else does it so easily...
+		Text:I can't. I just can't. This is supposed to be easy right? Then why is it so hard for me?
+		Text:Why does my body refuse to obey me? 
+		Text:Come on, I can't give up.
+		Text:Outside my thoughts, I remain motionless in bed.
+	EndJump
+
+	Jump:TS
+		Text:Just a little break? It's okay right? I already tried once...
+		Text:Already tired of the fight, I continue laying in bed drained of energy. 
+		Text:I knew it would go like this
+	EndJump
+
+	Jump:ST
+		Text:Okay, I may have slept in a little, but it's not too late! I can do this. All I need to do is get up! Come on!
+		Text:I can't. I just can't. This is supposed to be easy right? Then why is it so hard for me?
+		Text:Why does my body refuse to obey me? 
+		Text:Come on, I can't give up.
+		Text:Outside my thoughts, I remain motionless in bed.
+	EndJump
+
+	Jump:SS
+		Text:5 minutes... then 10 minutes... then all day. That's how it always goes... so much for being "better"
+		Text:Already tired of the fight, I continue laying in bed drained of energy. 
+		Text:I knew it would go like this
+	EndJump
+
+	Select:2
+	0:Get Up
+		JumpTo:Try3
+	1:Continue Sleeping
+		JumpTo:Cont3
+
+	Jump:Try3
+		dVar:smood(-6)
+		ScoreSwitch:2
+		0:smood(>=35)
+			JumpTo:TTT
+		1:smood(<35)
+			JumpTo:TST
+	EndJump
+
+	Jump:Cont3
+		dVar:smood(-15)
+		ScoreSwitch:3
+		0:smood(>=29)
+			JumpTo:TTS
+		1:smood(>=26)
+			JumpTo:STS
+		2:smood(>=23)
+			JumpTo:TTS
+		3:smood(>=20)
+			JumpTo:SSS
+	EndJump
+
+	Jump:TTT
+		Text:All I have to do is open my eyes and get out of bed. Just one step at a time... come on! Please, just work.
+	EndJump
+
+	Jump:TST
+		Text:Getting up... it's so hard. It's like there's always something weighing me down, this tiredness, the weariness. 
+		Text:But... I have to try. 
+		Text:Come on, I can do this! Be better! I can do it!
+	EndJump
+
+	Jump:TTS
+		Text:Who was I kidding? Thinking I could do it, change myself. 
+		Text:<b>Better?</b>. Yeah right. I'm too tired for this.
+	EndJump
+
+	Jump:STS
+		Text:I already tried once... we all know how that went. There's no point in trying again. 
+		Text:I'm too tired for this.
+	EndJump
+
+	Jump:SSS
+		Text:I'm too tired for this. I can't do it.
+	EndJump
+
+	Text:I remain in bed.
+	Text:KNOCK! KNOCK! KNOCK!
+
+	Text:[Mom] Wake up! What are you doing, you were supposed to wake up half an hour ago! Stop being so lazy, you’re going to be late!
+
+	Text:She acts as though it's so simple. Just "get up". If only it was that simple. 
+	Text:I can't do this... no I have to.
+	Text:I muster all my strength together. 
+	Text:<i>Get Up!</i>
+
+
+	COUCH:Bedroom 1
+EndTag

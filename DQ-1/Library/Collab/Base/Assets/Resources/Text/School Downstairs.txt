@@ -1,0 +1,63 @@
+
+Tag: Gym
+Text: Gymnasium
+ScoreCase: smood(>=30)
+	Then:
+		Text: [You] I'll never understamd how there's always so many people here in the morning. People are so healthy.
+	EndThen
+	Else:
+		Text: [You] Look at them actually being fit unlike me. Sigh.
+	EndElse
+EndScoreCase
+EndTag
+
+
+Tag: LunchR
+Text: Cafeteria
+ScoreCase: smood(>=30)
+    Then: 
+		Text: [You] It's the guest room. You know what's unfair? The fact that the guest room has a fluffier bed than mine. I should just steal the bed in there... pick it up and just carry it in my room. I'm sure noone would notice, right? Okay I should really get to school!
+    EndThen
+    Else:
+        Text:[You] The guest room... we always keep it extremely nice and neat. I wish I could be like that... nice... neat... clean. I'm just a mess instead.
+    EndElse
+EndScoreCase
+EndTag
+
+Tag: Troph Case
+Text: Trophy Case
+ScoreCase: smood(>=10)
+    Then: 
+		Text: [You] It's the bathroom, although I don't really need to go in there right now. 
+    EndThen
+    Else:
+        Text:[You] Sometimes, I really just want to go in there and hide. At least there I'm safe from everything... although even then it only last so long before life must come crashing down once more.
+    EndElse
+EndScoreCase
+EndTag
+
+Tag: HealthO
+Text: Health Office
+ScoreCase: smood(>=10)
+    Then: 
+		Text: [You] It's the bathroom, although I don't really need to go in there right now. 
+    EndThen
+    Else:
+        Text:[You] Sometimes, I really just want to go in there and hide. At least there I'm safe from everything... although even then it only last so long before life must come crashing down once more.
+    EndElse
+EndScoreCase
+EndTag
+
+Tag: Locker1
+Text: Locker
+ScoreCase: smood(>=10)
+    Then: 
+		Text: [You] It's the bathroom, although I don't really need to go in there right now. 
+    EndThen
+    Else:
+        Text:[You] Sometimes, I really just want to go in there and hide. At least there I'm safe from everything... although even then it only last so long before life must come crashing down once more.
+    EndElse
+EndScoreCase
+EndTag
+
+

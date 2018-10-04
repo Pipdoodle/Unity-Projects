@@ -1,0 +1,68 @@
+
+Tag: TV
+Text: Television
+ScoreCase: smood(>=20)
+	Then:
+		Text: In middle school, I'd spend all my time watching Phineas and Ferb and playing Brawl on here since we had so much more time. Ahem high school ruining my life, jk, except maybe.
+	EndThen
+	Else:
+		Text: I used to love watching TV... Phineas and Ferb... playing Brawl... I'd get such a thrill cheering them on, pretending it was me... now there's just nothing. 
+	EndElse
+EndScoreCase
+EndTag
+
+
+Tag: Table
+Text: Table
+ScoreCase: smood(>=10)
+    Then: 
+		Text: [You] Mom and Dad must be happy I don't work down here anymore! This table used to be covered all the time with papers and pens and crafts. After eigth grade though that stopped...
+    EndThen
+    Else:
+        Text:[You] How empty. Once it used to be full and brimming with papers and now it's just barren. Wow, wonder what that reminds me of... definitely not my life.
+    EndElse
+EndScoreCase
+EndTag
+
+Tag: Couch
+Text: Couch
+ScoreCase: smood(>=20)
+    Then: 
+		Text: [You] Fluffy couches really are the best aren't they? I used to spend hours just curled up here reading Harry Potter or doing my homework.
+    EndThen
+    Else:
+        Text:[You] Soft and nice, what does it matter though? It's just a seat that inevitably you have to leave no matter how nice it is. 
+    EndElse
+EndScoreCase
+EndTag
+
+Tag: Rug
+Text: Rug
+ScoreCase: smood(>=20)
+    Then: 
+		Text: [You] Hogwarts, Battle of Manhattan, Aladdin's palace: on this rug we could go anywhere we wanted. Anything was possible. 
+		Text: It was here that we made our promise...
+		Text: Never mind, let's not think about that. It's in the past.
+    EndThen
+    Else:
+        Text:[You] Once upon a time, the moment we stepped on this rug we would be transported to a place of adventure. No longer were we in our house, but all of a sudden we were flying on a flying carpet, sitting in the great hall of Hogwarts, fighting off monsters. 
+		Text: Most importantly though... it was where we promised...
+		Text: You know the saddest part of the entire thing? I actually believed in it... 
+		Text:I was an idiot.
+    EndElse
+EndScoreCase
+EndTag
+
+Tag: DR
+Text: Dining Room
+ScoreCase: smood(>=30)
+    Then: 
+		Text: [You] I never really understood the need for dining rooms. Like it's not like we eat here or anything, it just sits here gathering dust, figuratively... mom would never let dust actually gather. Imagine what people would think! Oh the horror, dust! Eh either way, I will never understand social norms!
+    EndThen
+    Else:
+        Text:[You] Everything's perfectly polished, not a speck of dust. In the center, a single glass vase with the fake blooming flower... the perfect dining room representing the perfect family to showcase to the outside world... what does that remind me of?
+    EndElse
+EndScoreCase
+EndTag
+
+

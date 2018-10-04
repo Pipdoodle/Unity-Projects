@@ -1,0 +1,267 @@
+Tag:splash
+Text:Finally, I manage to get myself off the bed.
+ScoreCase:smood(>25)
+	Then:
+		Text: I did it! I got myself out of bed! I may have taken awhile, but at least I tried. Maybe things will actually get better!
+	EndThen
+
+	Else:
+		Text:I did it... but not until I was forced to. It doesn't actually mean anything. 
+		Text:Why am I like this?
+	EndElse
+EndScoreCase
+Text:Rubbing my eyes, I look around the room.
+Text:add 10 to smood
+dVar:smood(10)
+Text:remove 10 from smood
+dVar:smood(-10)
+Text:that was done
+EndTag
+
+Tag: bed
+ScoreCase: smood(>=50);and;lmood(>=50);and;isol(>=50)
+	Then:
+		Text: [Bed] It's my bed! Oh bed, you beautiful temptress attempting to lure me back into your grasp, but I have bested you! It may have taken parental help, but still I have escaped! Okay I should stop now and go to school.
+	EndThen
+	Else:
+		Text: [Bed] I just want to curl up inside my sheets and go back to sleep. Why is that so wrong?
+	EndElse
+EndScoreCase
+EndTag
+
+Tag: bookcase
+ScoreCase: smood(>=50);and;lmood(>=50);and;isol(>=50)
+	Then:
+		Text: [Bookcase] This sure brings back memories. Some of these used to be my favorite books in middle school when we... Nevermind, that's in the past. I still have to read a lot of these, at least it's something to look forward to.
+	EndThen
+	Else:
+		Text: [Bookcase] All these books... I used to love them. They would take me away of amazing adventures- no- take us away. Now... I've realized they're just words on paper, nothing more. All these books I never read... I used to be so excited to read them, but now, whatever.
+	EndElse
+EndScoreCase
+
+Select:2
+0: Examine books further
+	JumpTo: Book1
+1: Don't examine books
+	JumpTo: EndBook
+
+Jump: Book1
+	Text:Lined on the top shelf are all the books I used to read in middle school. The middle shelf is full of school books. The bottom shelf... all the books I never got to reading.
+
+	Select: 3
+	0: Examine top shelf
+		JumpTo: Book1.1
+	1: Examine middle shelf
+		JumpTo: Book1.2
+	2: Examine bottom shelf
+		JumpTo: Book1.3
+EndJump
+
+Jump: Book1.1
+	ScoreCase: smood(>=50);and;lmood(>=50);and;isol(>=50)
+		Then:
+			Text:Hogwarts, Narnia, Camp Half-Blood, we went on such amazing adventures there together. It was always so fun, and even though we knew it wasn't real, we never forgot our lessons. To keep trying, perservering and in the end things would be okay. To never lose sight of hope. Things were so much simpler then...
+		EndThen
+		Else:
+			Text:Hogwarts, Narnia, Camp Half-Blood... we used to imagine they were real places. As though magic was real, miracles existed, and happy endings were true... and life would work out...Whatever, I know better now.
+		EndElse
+	EndScoreCase
+	Select: 2
+	0: Look at other books
+		JumpTo: Book1
+	1: Stop looking at books
+		JumpTo: EndBook
+EndJump
+
+Jump: Book1.2
+	ScoreCase: smood(>=50);and;lmood(>=50);and;isol(>=50)
+		Then:
+			Text:You know, a lot of these weren't as bad as everyone says! Actually, nevermind they were kindof bad... eh at least its over now.
+		EndThen
+		Else:
+			Text:I used to be able to finish these books, last year though... I just couldn't. I screwed up so much last year.
+		EndElse
+	EndScoreCase
+	Select: 2
+	0: Look at other books
+		JumpTo: Book1
+	1: Stop looking at books
+		JumpTo: EndBook
+EndJump
+
+Jump: Book1.3
+	ScoreCase: smood(>=50);and;lmood(>=50);and;isol(>=50)
+		Then:
+			Text:I remember these. I bought these all and I was going to read them but I just never got time to. Oneday though, I really need to get around to reading these!
+		EndThen
+		Else:
+			Text:Honestly, I don't know why I still have these. It's not like I'm ever actually going to read these.
+		EndElse
+	EndScoreCase
+	Select: 2
+	0: Look at other books
+		JumpTo: Book1
+	1: Stop looking at books
+		JumpTo: EndBook
+EndJump
+
+Jump: EndBook
+EndJump
+EndTag
+
+
+Tag:Desktop
+ScoreCase: smood(>=30)
+	Then:
+		Text: [Desk] Oh it's my plain old desk. I should really clean this up soon... eh, well it's an organized mess!
+	EndThen
+	Else:
+		Text: [Desk] Look at this, what a mess. I can't even keep my desk clean, what was I thinking? There's crumbs everywhere, papers stacked randomly, no wonder my parents think I'm a slob. 
+	EndElse
+EndScoreCase
+
+ScoreCase:dayOneCheckedComputer(==1)
+	Then:
+		Select:2
+		0: Examine desk further
+			JumpTo:DeskDrawer
+		1: Stop
+			JumpTo:EndDesk
+	EndThen
+	Else:
+		Select:3
+		0: Examine desk further
+			JumpTo:DeskDrawer
+		1: Use computer
+			JumpTo:Computer
+		2: Stop
+			JumpTo:EndDesk
+	EndElse
+EndScoreCase
+
+Jump:Computer
+	dVar:dayOneCheckedComputer(1)
+	Text:I guess I may as well quickly check things on my computer
+	Puzzle:[PasswordInput]
+	Puzzle:[thoughtSpiral]testThought.txt
+	dVar:smood(-20)
+EndJump
+
+Jump:DeskDrawer
+ScoreCase: smood(>=30)
+	Then:
+		Text:See, this is not a mess. I know where everything is! 
+		Text:In the corner is all the dirty plates and trash that I could throw away into the can right next to my desk but still don't... 
+		Text:Why haven't I done that? 
+		Text:Then in the front corner is a giant pile of papers of everything I shove here. 
+		Text:Then there's my computer to the left. And all my pens and pencils and everything else in the middle! 
+		Text:See perfectly organized.... I'll clean it one day, it's fineeeeee.
+	EndThen
+	Else:
+		Text:Why am I such a slob? Why can't I be better. 
+		Text:Look at this filth. 
+		Text: All this trash in the corner while the trash can is right there. And still I do nothing about it. 
+		Text:And then these papers, you know these are probably important, but, me being me, I just shove them away because organization? What's that? 
+		Text: And then all my office supplies are just piled together... if I needed to find anything I wouldn't be able to. 
+		Text:I hate this so much, but what's worse is that I still haven't changed.
+	EndElse
+EndScoreCase
+EndJump
+
+Jump:EndDesk
+EndJump
+EndTag
+
+Tag: trashcan
+ScoreCase: dayOneTrashCan(==1)
+	Then:
+		Text:Trash Can
+	EndThen
+	Else:
+		JumpTo: InitialTrash
+	EndElse
+EndScoreCase
+
+Jump:InitialTrash
+ScoreCase: smood(>=30)
+    Then: 
+        Text: [Trash can] You know... it's kinda funny how empty my trash is relative to how messy my desk is. 
+        Text: [Trash can] Eh, who needs trash when you can just leave things laying around... ehhe. 
+        Oh hey, there's actually something inside... I don't remember throwing out anything?
+    EndThen
+    Else:
+        Text:  [Trash can] Wow look, it's my home, the trash can!
+        Text:  [Trash can] No, wait, just kidding it's empty and black like my soul. 
+        Text:  [Trash can] Oh, hey, there's something inside?
+    EndElse
+EndScoreCase
+
+Select: 2
+0: Examine item from trash
+    JumpTo: trash1
+1: Don't examine trash
+    JumpTo: EndTrash
+EndJump
+
+Jump: trash1
+    Text:  Oh, I remember now...it's the letter I got in the beginning of the summer from them. 
+    Text:  Maybe I should read it. [wait=1]
+    No, I won't. This is where it belongs. 
+    Text:  They made their choice.
+EndJump
+
+Select: 2
+0: Rip it up
+	JumpTo:Rip
+1: Keep it
+	JumpTo:Keep
+
+Jump:Rip
+	dVar:destroyLetter(1)
+	Text: Tearing up the paper, first in half, then in quarters, then in eigths, I let it float into the trash can. 
+	Text: For a second, a tear forms, but then I brush it aside. 
+	Text:  You made your choice, I've made mine.
+EndJump
+
+Jump:Keep
+	Text:Holding it in my hands, I stare at the blurring paper for a few seconds before quickly brushing the tears aside. 
+	Text:No... I won't open it... but I guess there's no point in destroying it... I'll just keep it with me.
+EndJump
+
+Jump: EndTrash
+EndJump
+EndTag
+
+Tag: mirror
+ScoreCase: smood(>=30)
+    Then: 
+        Text: [Mirror] The mirror is a reflection of yourself, but is it reality? Lights bouncing off a surface for our brains to interpret, but if it's up to our brains, how do we know if its actually real? How do we know our brains aren't messing something up? Hmmm... Okay I'm getting way too philosophical, I blame the morning!
+    EndThen
+    Else:
+        Text: [Mirror] It's me...I don't want to look at myself.
+    EndElse
+EndScoreCase
+EndTag
+
+Tag: closet
+dVar:clothes(1)
+ScoreCase: smood(>=30)
+    Then: 
+        Text: [Closet] Guess I should actually get clothes now. 
+        Text: [Closet] Starting new fashion trends is cool, but pajamas covered in "I love sleep"... probably should wait till later in the year for that. 
+        Text: [Closet] Maybe I could go with something cool, like this shirt! It has the poop emoji on it! \
+        Or I could wear this button down, look all nice and professional and fancy! \
+        Or I could just yolo, sleep pajama trends? 
+        Text:  Lets go!
+    EndThen
+    Else:
+        Text:  [Closet] All these clothes, what's the point? 
+        Text:  [Closet] Poop emoji shirt? How juvenile. \
+        Button down? How awkward. \
+        And I can't just wear my pajamas, everyone's going to judge me. 
+        Text:  [Closet] Then again, it's not like they make a difference in anything. They won't make me better. 
+        Text:  [Closet] Whatever, I'll just pick something
+    EndElse
+EndScoreCase
+EndTag
+

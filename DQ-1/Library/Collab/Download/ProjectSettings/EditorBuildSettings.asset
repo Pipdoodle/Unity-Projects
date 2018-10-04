@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/_Scenes/dialogTest.unity
+    guid: 58fa7aafefc694ee6b4762cfe80c6d9b
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: Assets/_Scenes/Scene 1.unity
+    guid: 9c58c487f9878a9409426b5f3a76399e
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: Assets/_Scenes/Tech Demo/Introduction.unity
+    guid: de8f61c47710e49c18a180c85a64f8e7
+  - enabled: 0
+    path: Assets/_Scenes/Tech Demo/Bedroom.unity
+    guid: ae07716e389ca3542b9ed001d22ee27a
+  - enabled: 0
+    path: Assets/_Scenes/Tech Demo/School.unity
+    guid: 6209a5b250c5e3c4d8b4930400e30123
+  - enabled: 1
+    path: Assets/_Scenes/Final/Introduction 1.unity
+    guid: c32a21ee80cd5ad48915cf55386cc5f8
+  - enabled: 1
+    path: Assets/_Scenes/Final/Bedroom 1.unity
+    guid: 6dcfe1ca84f77344f9f75aab6b8f5de6
+  - enabled: 0
+    path: Assets/_Scenes/Final/Bedroom 2.unity
+    guid: 480502dfc4e332e4089be374342178a8
+  - enabled: 1
+    path: Assets/_Scenes/Final/House Kitchen.unity
+    guid: 431dd281a78b2cd46a61cfaee35e4e31
+  - enabled: 1
+    path: Assets/_Scenes/Final/House LivingRoom.unity
+    guid: caa292770d711d6478899f254064f699
+  - enabled: 1
+    path: Assets/_Scenes/Final/House Hall 1.unity
+    guid: 16c8ea9fba3baa240a26eb8698406af8

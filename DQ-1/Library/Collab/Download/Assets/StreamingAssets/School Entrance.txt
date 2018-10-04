@@ -1,0 +1,380 @@
+Tag:splash
+ScoreCase:smood(>20)
+	Then:
+		Text:It's a new year. It's a chance to be finally be better! I guess I should probably talk to everyone... and also find my locker!
+	EndThen
+	Else:
+		Text:Oh great, it begins again... I can't deal with this, I really really can't. There's so many people here, and they're all probably going to be unhappy with me. Then again does it matter? Who knows how long they'll last anyway.  And then there's the fact that I don't even know where my locker is. This is off to a great start.
+	EndElse
+EndScoreCase
+EndTag
+
+Tag:Friend1
+Text:[Jill] Hey! It's been so long, you just disappeared over the summer! How have you been?
+Select:3
+0:I've been great! 
+	JumpTo:P1P1
+1:I've been fine.
+	JumpTo:P1P2
+2:Good.
+	JumpTo:P1P3
+
+Jump:P1P1
+	Text:[Jill] That's good to hear! What have you been up to? 
+	Select:2
+	0:Just things, you know work, studying and all that. 
+		JumpTo:P1P1P1
+	1:I...actually I've just been feeling really down.
+		JumpTo:P1P1P2
+EndJump
+
+Jump:P1P2
+	Text:[Jill] Are you sure about that? You seem a bit... hesitant.
+	Select:2
+	0:Yea of course. Just because I'm not jumping for joy at being back doesn't mean anything's wrong! I mean, it's school!
+		JumpTo:P1P2P1
+	1:I... nevermind. Yea I'm good! 
+		JumpTo:P1P2P2
+EndJump
+
+Jump:P1P3
+	Text:[Jill] Wow that was an extremely inciteful answer. Now I know exactly what and how you're feeling.
+	Select:3
+	0:Yup, that's me! Always divulging my deepest and darkest secrets!
+		JumpTo:P1P3P1
+	1:Sure... you don't have to be so sarcastic you know. 
+		JumpTo:P1P3P2
+	2:Actually, you have no idea whatsover what it's like to feel like me so just don't. 
+		JumpTo:P1P3P3
+EndJump
+
+Jump:P1P1P1
+	Text:[Jill] You know for someone who supposedly doesn't like school that much you sure do study a lot. Either way I suppose I should leave you to be on your way.
+	JumpTo:EndTalkingP1
+EndJump
+
+Jump:P1P1P2
+	Text:What am I thinking, saying that? I could never do that. That's be so unfair to them, they haave their own things in life to be worried about.
+	JumpTo:P1P1
+EndJump
+
+Jump:P1P2P1
+	Text:[Jill] True, valid point. I'll give you that! I have to go to find my locker now though. See you at lunch!
+	JumpTo:EndTalkingP1
+EndJump 
+
+Jump:P1P2P2
+	Text:[Jill] You okay?
+	Select:2
+	0:Yup! I promise I'm completely fine!
+		JumpTo:P1P2P2P1
+	1:I'm just feeling a tad bit off, but I'll feel better in a bit! No need to worry about me!
+		JumpTo:P1P2P2P2
+EndJump
+
+Jump:P1P3P1
+	Text:[Jill] Heh. Anyway, I gotta go and find my locker. See you at lunch! Or if we're lucky maybe even in class!
+	JumpTo:EndTalkingP1
+EndJump
+
+Jump:P1P3P2
+	Text:[Jill] I'm just teasing you! Anyway, I gotta go and find my locker. See you at lunch! Or if we're lucky maybe even in class!
+	JumpTo:EndTalkingP1
+EndJump
+
+Jump:P1P3P3
+	Text:I can't say that, that's mean... even if I really want to say it.
+	JumpTo:P1P3
+EndJump
+
+Jump:P1P2P2P1
+	Text:[Jill] Okay, if you say so! I'll be off then to first block. See you at lunch or maybe in class!
+	JumpTo:EndTalkingP1
+EndJump
+
+Jump:P1P2P2P2
+	Text:[Jill] Well then I hope you feel better soon! And that's what friends is about! We worry about each other and that's okay! Anyway though, the bells going to ring soon. See you later!
+	JumpTo:EndTalkingP1 
+EndJump
+
+Jump:EndTalkingP1
+EndJump
+
+EndTag
+
+Tag:Friend2
+Text:[Alec] It's so good to see you! We were all worried about you! 
+Select:3
+	0:Sheesh, you all worry too much. See look, I'm perfectly intact and all in one piece.
+		JumpTo:P2P1
+	1:Unlike the rest of you plebians, I actually do things with my life over the summer. JK, honestly though I was a bit busy. Sorry about losing contact!
+		JumpTo:P2P2
+	2:Worried about me? Why would you worry about me? 
+		JumpTo:P2P3
+
+Jump:P2P1
+Text:[Alec] True true. But you could have at least responded to our texts! We were worried!
+Select:3
+	0:About that... I forgot my password and couldn't get in my social media accounts, sorry.
+		JumpTo:P2P1P1
+	1:I didn't have access to the internet or cell!
+		JumpTo:P2P1P2
+	2:I meant to respond! I really did! I just got anxious and then...it was just too hard.
+		JumpTo:P2P1P3
+EndJump
+
+Jump:P2P2
+Text:[Alec] Plebians? Plebians you say? I'll have you know I am the true royalty here! I am none other than the Prince Alec of the Kingdom of... um... 
+Select:3
+	0:Kingdom of LazyTown?
+		JumpTo:P2P2P1
+	1:Oh how could I ever forget your royal majesty of the Crazy Kingdom. I offer you my sincerest apologies.
+		JumpTo:P2P2P2
+	2:I declare treason! How dare you falsely declare a title! I demand proof otherwise to the stocks you must go!
+		JumpTo:P2P2P3
+EndJump
+
+Jump:P2P3
+Text:[Alec] You disapeared on us. Of course I was worried! I'm not the only one you know... we were all worried that something had happened! 
+Text:[Alec] We care about you, you're our friend. You really could have at least, you know, messaged or responded to at least one of us to let us know you were okay!
+Select:3
+	0:About that... I forgot my password and couldn't get in my social media accounts, sorry.
+		JumpTo:P2P1P1
+	1:I didn't have access to the internet or cell!
+		JumpTo:P2P1P2
+	2:I meant to respond! I really did! I just got anxious and then...it was just too hard.
+		JumpTo:P2P1P3
+EndJump
+
+Jump:P2P1P1
+Text:[Alec] You forgot your password... really... then why did we see you online? 
+Select:3
+	0:I don't know? It was probably a facebook bug? 
+		JumpTo:P2P1P1P1
+	1:Maybe someone hacked my account?
+		JumpTo:P2P1P1P1
+	2:I... I'm sorry. I lied, I just wasn't feeling up to talking to all of you. 
+		JumpTo:P2P1P1P3
+EndJump
+
+Jump:P2P1P2
+Text:[Alec] How did you end up with no internet access? I'm pretty sure they have wifi everywhere... and I know you own a cell...
+Select:3
+	0:Um.. we went vacationing to a place with bad internet acess and I lost my cell. I only recently found it!
+		JumpTo:P2P1P1P1
+	1:I don't have to explain myself to you.
+		JumpTo:P2P1P2P2
+	2:I... I'm sorry. I lied, I just wasn't feeling up to talking to all of you. 
+		JumpTo:P2P1P2P3
+EndJump
+
+Jump:P2P1P3
+Text:I can't admit that! They'll think I'm weak or messed up or idk, something else. Who knows, either way I can't say that. 
+JumpTo:P2P1
+EndJump
+
+Jump:P2P1P1P1
+Text:[Alec] Sure...You know you don't have to lie to me. You could have said you didn't want to answer.
+Select:2
+	0:I'm not lying!
+		JumpTo:P2P1P1P1P1
+	1:Yea right. If I said that I didn't want to answer you'd have just ended up pushing me. I didn't have a choice!
+		JumpTo:P2P1P1P1P2
+EndJump
+
+Jump:P2P1P1P3
+Text:What kind of excuse is that though. Wasn't feeling like talking to you? If I said that... who knows what Alec will think. On top of that, I can't admit that I lied! He might hate me! I have to keep going. 
+JumpTo:P2P1P1
+EndJump
+
+Jump:P2P1P2P3
+Text:What kind of excuse is that though. Wasn't feeling like talking to you? If I said that... who knows what Alec will think. On top of that, I can't admit that I lied! He might hate me! I have to keep going. 
+JumpTo:P2P1P2
+EndJump
+
+Jump:P2P1P2P2
+Text:[Alec] You really don't need to be so antagonistic. I'm your friend. I just wanted to make sure you're okay... that's all. 
+Text:I need to get to class now though... I guess I'll see you later. 
+JumpTo:EndTalkingPerson2
+EndJump
+
+Jump:P2P1P1P1P2
+Text:I'm sure he'd take it amazingly if I said that... even if I really want to say it. I can't take the risk though.
+JumpTo:P2P1P1P1
+EndJump
+
+Jump:P2P1P1P1P1
+Text:[Alec] ... You know what? I don't want to fight with you on the first day. 
+Text:[Alec] I'll just say I believe you. Just, you know, remember we're your friends and we're here for you. You don't have to pretend.
+JumpTo:EndTalkingPerson2
+EndJump
+
+Jump:P2P2P1
+Text:[Alec] Why, how dare you suggest my kingdom is a mere town! 
+Select:2
+	0:So you admit you're lazy? 
+		JumpTo:P2P2P1P1
+	1:Yeah you're right. Town would be stretching it, abandoned broken down hut? I think that about describes it. 
+		JumpTo:P2P2P1P2
+EndJump
+
+Jump:P2P2P2
+Text:[Alec] As the prince I accept your apolo- Hey, wait a second, did you just insult me? 
+Select:2
+	0:Why I would never dare insult your majesty. 
+		JumpTo:P2P2P2P1
+	1:Yup. 
+		JumpTo:P2P2P2P2
+EndJump
+
+Jump:P2P2P3
+Text:[Alec] I admit to my fault, I should have known you'd see through me. Please merciful and kind ruler take mercy on me! 
+Select:2
+	0:Very well, in punishment you must go to the dreaded homeroom and survive an hour. 
+		JumpTo:P2P2P3P1
+	1:Very well, just this once. It had better never happen again!
+		JumpTo:P2P2P3P2
+EndJump
+
+Jump:P2P2P1P1
+Text:[Alec] Of course not! Actually, you know what, laziness is a beautiful thing. I will proudly be lazy! 
+Text:[Alec] I now command you to journey off to class as the time now draws near! 
+Text:[Alec] And just before you leave, I'm really glad you're back. We all missed you over the summer!
+JumpTo:EndTalkingPerson2
+EndJump
+
+Jump:P2P2P1P2
+Text:[Alec] Wowwww. I see how it is. Well I suppose it is time for us to part ways to our classes.
+Text:[Alec] You know, I really did miss you over this summer. Glad to see you're back!
+JumpTo:EndTalkingPerson2
+EndJump
+
+Jump:P2P2P2P1
+Text:[Alec] Why do I feel like there is probably another insult hidden in there... Anyway, we should probably be heading to class now!
+Text:[Alec] I really did miss you though over the summer. Glad to see you're back!
+JumpTo:EndTalkingPerson2
+EndJump
+
+Jump:P2P2P2P2
+Text:[Alec] Wow, shameless in insulting your nobility. Anyway, we should probably be heading to class now!
+Text:[Alec] I really did miss you though over the summer. Glad to see you're back!
+JumpTo:EndTalkingPerson2 
+EndJump
+
+Jump:P2P2P3P1
+Text:[Alec] How could you? This is worse than the stocks! The rumors of you being a merciful ruler I see now are false. I will now tragically go to my punishment. 
+Text:[Alec] See you later! I've missed you and I'm glad you're back! 
+JumpTo:EndTalkingPerson2
+EndJump
+
+Jump:P2P2P3P2
+Text:[Alec] I thank you for your mercy! I will ensure it never happens again! Now we must part ways to our lockers and then to class.
+Text:[Alec] See you later! I've missed you and I'm glad you're back! 
+JumpTo:EndTalkingPerson2
+EndJump
+
+Jump:EndTalkingPerson2
+EndJump
+EndTag
+
+Tag:Friend3
+Text:[Jenn] Yo! You ready the first day of school?
+Select:3
+	0:Sure...
+		JumpTo:P3P1
+	1:Who's ever ready for school tbh.
+		JumpTo:P3P2
+	2:Of courseeee. So ready and excited for Junior year which is known to be one of the most stressful years of high school.
+		JumpTo P3P3
+
+Jump:P3P1
+Text:[Jenn] Same. Okay, on a completely different topic, did you hear about the new phone update?
+Select:3
+	0:Phone update? When did that happen?
+		JumpTo:P3P1P1
+	1:Hidden feature? How does that work?
+		JumpTo:P3P1P2
+	2:Yea, I know about that already...
+		JumpTo:P3P1P3
+EndJump
+
+Jump:P3P2
+Text:[Jenn] True true. Okay, on a completely different topic, did you hear about the new phone update?
+Select:3
+	0:Phone update? When did that happen?
+		JumpTo:P3P1P1
+	1:Hidden feature? How does that work?
+		JumpTo:P3P1P2
+	2:Yea, I know about that already...
+		JumpTo:P3P1P3
+EndJump
+
+Jump:P3P3
+Text:[Jenn] You know I'm completely certain that was not sarcasm soooo glad to hear you're excited for school to start!
+Text:[Jenn] On a completely different topic though, did you hear about the new phone update?
+Select:3
+	0:Phone update? When did that happen?
+		JumpTo:P3P1P1
+	1:Hidden feature? How does that work?
+		JumpTo:P3P1P2
+	2:Yea, I know about that already...
+		JumpTo:P3P1P3
+EndJump
+
+Jump:P3P1P1
+Text:[Jenn] A few weeks ago. You really need to update your phone more often! You should go check it out!
+Text:[Jenn] Remember 1 is the key to seeing it again!
+JumpTo:EndTalkingF3
+EndJump
+
+Jump:P3P1P2
+Text:[Jenn] You go into your phone, press settings, and then click the logo and it'll pop up as a new app! You should check out your phone with the update now! 
+Text:[Jenn] Remember 1 is the key to seeing it again!
+JumpTo:EndTalkingF3
+EndJump
+
+Jump:P3P1P3
+Text:[Jenn] Isn't it mysterious? I heard it changes a lot! But no one knows for certain what causes it to change. Either way, remember 1 is the key to seeing it again!
+JumpTo:EndTalkingF3
+EndJump
+
+Jump:EndTalkingF3
+EndJump
+
+EndTag
+	 
+
+Tag:FrontDeskLady
+ScoreCase:smood(<40)
+	Then:
+		Text:I can't do that. She's probably going to get mad at me for losing my locker information! Who knows how she'll react! Maybe if I could find some encouragement to give me courage I could... but I just can't. 
+		JumpTo:EndTalkingFrontDeskLady
+	EndThen
+	Else:
+		Text:[Front Desk Lady] Hello, how may I help you? 
+		JumpTo:Continue
+	EndElse
+EndScoreCase
+
+Jump:Continue
+Text:I lost my locker information, could you help me?
+JumpTo:Continue1
+EndJump
+
+Jump:Continue1
+Text:[Front Desk Lady]  Not a problem, I'll just look you up in the directory...
+Text:[Front Desk Lady]  Your locker is on the second floor, number 4485. 
+EndJump
+
+Jump:EndTalkingFrontDeskLady
+EndJump
+
+EndTag
+
+
+
+
+
+
+
+

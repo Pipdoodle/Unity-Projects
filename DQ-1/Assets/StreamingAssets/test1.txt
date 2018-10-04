@@ -1,0 +1,68 @@
+Tag:Splash
+Text:[Speaker1]Hello, bed!
+Text:This is your second line.
+JumpTo:First
+
+Text:hello, bookcase!
+Text:[asdfg]Entering four-choice Select
+Select:4
+0:increase 1 by 5, decrease 2 by 2
+	JumpTo:First
+1:decrease 1 by 5, increase 2 by 5
+	JumpTo:Second
+2:increase 2 by 10
+	JumpTo:Third
+3:puzzuru
+	JumpTo:Fourth
+Text:End of four-choice Select
+
+Jump:First
+	dVar:smood(5); lmood(-2)
+	Text:[Put speaker name here]
+	Select:3
+	0:decrease 1 by 5, increase 2 by 5
+		JumpTo:Second
+	1:increase 2 by 10
+		JumpTo:Third
+	2:engage puzzle
+		JumpTo:Fourth
+EndJump
+
+Jump:Second
+	dVar:smood(-5); lmood(5)
+	Text:[   Speaker name here   ]Second
+EndJump
+
+Jump:Third
+	dVar:lmood(10)
+	Text:Third
+EndJump
+
+Jump:Fourth
+	dVar:smood(-10)
+	Text:Wait... what's my password?
+	Text:I couldn't have forgotten my password right?
+	Puzzle:testThought.txt
+EndJump
+
+Text:Entering and ScoreCase testing
+ScoreCase: smood(>=50);and;lmood(<=30)
+	Then:
+		Text:Your score1 >= 50 and score2 <= 30!!
+	EndThen
+	Else:
+		Text:Not score1 >=50 and score2 <= 30 :(
+	EndElse
+EndScoreCase
+
+Text:Entering or ScoreCase testing
+ScoreCase: smood(>=50);or;lmood(<=30)
+	Then:
+		Text:Your score1 >= 50 or score2 <= 30!!
+	EndThen
+	Else:
+		Text:Not score1 >=50 or score2 <= 30 :(
+	EndElse
+EndScoreCase
+EndTag
+

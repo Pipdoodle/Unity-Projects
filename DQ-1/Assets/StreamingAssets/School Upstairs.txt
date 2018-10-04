@@ -1,0 +1,60 @@
+
+Tag: CSC
+ScoreCase: smood(>=30)
+	Then:
+		Text: [Computer Science Lab] I've only ever been in there once. That's the computer lab and digital media lab. It's cool, but you can't get in without special permission or a class. Otherwise it's kept locked. 
+	EndThen
+	Else:
+		Text: [Computer Science Lab] I've only ever been in there once. That's the computer lab and digital media lab. It's cool, but you can't get in without special permission or a class. Otherwise it's kept locked. 
+	EndElse
+EndScoreCase
+EndTag
+
+
+Tag: GeoC
+ScoreCase: smood(>=30)
+    Then: 
+		Text: [Geography Classroom] Geography class.... bad times. Who wants to memorize all the states in the US or all the countries in Africa, like it's really not thaaaatt useful to know.
+    EndThen
+    Else:
+        Text: [Geography Classroom] Geography class.... bad times. Who wants to memorize all the states in the US or all the countries in Africa, like it's really not thaaaatt useful to know.
+    EndElse
+EndScoreCase
+EndTag
+
+Tag: English
+ScoreCase: smood(>=10)
+    Then: 
+		Text: [English Classroom] I'm definitely going to be having a class in there. Honestly though, of all classes, why do we have to have four years of English. I mean reading is nice, but still you'd think you get the point after many years before. 
+    EndThen
+    Else:
+        Text: [English Classroom] English class... I used to do so well... look at me now though, I can barely finish reading the books. What's wrong with me. 
+    EndElse
+EndScoreCase
+EndTag
+
+Tag: SC
+ScoreCase: smood(>=10)
+    Then: 
+		Text: [Science Classroom] Science class is always a wildcard. Sometimes it's super interesting... sometimes I fall asleep in the first five minutes. Hopefully it's something interesting this year.
+    EndThen
+    Else:
+        Text: [Science Classroom] Science class is always a wildcard. Sometimes it's super interesting... sometimes I fall asleep in the first five minutes. Hopefully it's something interesting this year.
+    EndElse
+EndScoreCase
+EndTag
+
+Tag: Locker1
+ScoreCase: smood(>=10)
+    Then: 
+		Text: [Lockers] I always thought these lockers were pretty big, like what are you going to put in it? You could actually fit a person in here... probably. Wonder which one's mine. 
+    EndThen
+    Else:
+        Text: [Lockers] They're just lockers.
+    EndElse
+EndScoreCase
+
+Tag: LockerUr
+Text: Your Locker
+Puzzle:[Journal]
+EndTag

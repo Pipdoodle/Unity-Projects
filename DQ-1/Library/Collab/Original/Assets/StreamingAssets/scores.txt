@@ -1,0 +1,7 @@
+smood:170
+lmood:250
+isol:300
+clothes:0
+destroyLetter:0
+dayOneCheckedComputer:0
+dayOneBreakfast:1

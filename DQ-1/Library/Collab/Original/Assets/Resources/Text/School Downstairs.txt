@@ -1,0 +1,62 @@
+
+Tag: Gym
+Text: Gymnasium
+ScoreCase: smood(>=30)
+	Then:
+		Text: [You] Look at all these people being healthy. I'll never understand how people do it. Mornings are for sleeping not chasing after balls!
+	EndThen
+	Else:
+		Text: [You] Look at them actually being fit unlike me. Sigh.
+	EndElse
+EndScoreCase
+EndTag
+
+
+Tag: LunchR
+Text: Cafeteria
+ScoreCase: smood(>=30)
+    Then: 
+		Text: [You] Good old cafeteria with it's not at all suspiscious food made of who knows what. At least it's a break from school!
+    EndThen
+    Else:
+        Text:[You] Tthere's always so many people in there, so much noise: laughter, talking, shouting, joking, andso the quiet ones slip away into the shadows... alone.
+    EndElse
+EndScoreCase
+EndTag
+
+Tag: Troph Case
+Text: Trophy Case
+ScoreCase: smood(>=10)
+    Then: 
+		Text: [You] The blatent need for school to show off their trophies always baffles me. Like okay, while the kids are still in school that makes sense, but some of these are from like 20 years ago. Honestly, noone even knows who they are! 
+    EndThen
+    Else:
+        Text:[You] All these people actually accomplishing things, that'll never be me. Everyone's always like "try hard and your dreams will come true!" Sure and unicorns are real. 
+    EndElse
+EndScoreCase
+EndTag
+
+Tag: HealthO
+Text: Health Office
+ScoreCase: smood(>=10)
+    Then: 
+		Text: [You] Health office
+    EndThen
+    Else:
+        Text:[You] 
+    EndElse
+EndScoreCase
+EndTag
+
+Tag: Locker1
+Text: Locker
+ScoreCase: smood(>=10)
+    Then: 
+		Text: [You] 
+    Else:
+        Text:[You] 
+    EndElse
+EndScoreCase
+EndTag
+
+

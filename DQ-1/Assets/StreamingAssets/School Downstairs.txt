@@ -1,0 +1,57 @@
+
+Tag: Gym
+ScoreCase: smood(>=30)
+	Then:
+		Text: [Gymnasium] Look at all these people being healthy. I'll never understand how people do it. Mornings are for sleeping not chasing after balls!
+	EndThen
+	Else:
+		Text: [Gymnasium] Look at them actually being fit unlike me. Sigh. I'd never be able to do that even if I wanted to. 
+	EndElse
+EndScoreCase
+EndTag
+
+
+Tag: LunchR
+ScoreCase: smood(>=30)
+    Then: 
+		Text: [Cafeteria] Good old cafeteria with it's not at all suspiscious food made of who knows what. At least it's a break from school!
+    EndThen
+    Else:
+        Text:[Cafeteria] Tthere's always so many people in there, so much noise: laughter, talking, shouting, joking, andso the quiet ones slip away into the shadows... alone.
+    EndElse
+EndScoreCase
+EndTag
+
+Tag: Troph Case
+ScoreCase: smood(>=10)
+    Then: 
+		Text: [Trophy Case] The blatent need for school to show off their trophies always baffles me. Like okay, while the kids are still in school that makes sense, but some of these are from like 20 years ago. Honestly, noone even knows who they are! 
+    EndThen
+    Else:
+        Text:[Trophy Case] All these people actually accomplishing things, that'll never be me. Everyone's always like "try hard and your dreams will come true!" Sure and unicorns are real. 
+    EndElse
+EndScoreCase
+EndTag
+
+Tag: HealthO
+ScoreCase: smood(>=10)
+    Then: 
+		Text: [Health Office] I've actually never been in there, well okay I did once because they wanted to take heights and weights, but besides that I can proudly say I've never needed to go to the nurses! Although I heard you could take naps there... maybe I should go there sometime this year...
+    EndThen
+    Else:
+        Text:[Health Office] It's the nurses office. What can they do? Give you a bandaid? Ice pack? Tylenol? In the end that's all they can do. What's the point?
+    EndElse
+EndScoreCase
+EndTag
+
+Tag: Locker1
+ScoreCase: smood(>=10)
+    Then: 
+		Text: [Lockers] I always thought these lockers were pretty big, like what are you going to put in it? You could actually fit a person in here... probably.Wonder which one's mine. 
+    Else:
+        Text:[Lockers] They're just lockers.
+    EndElse
+EndScoreCase
+EndTag
+
+

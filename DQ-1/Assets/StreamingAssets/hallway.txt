@@ -1,0 +1,39 @@
+
+Tag:PR
+ScoreCase: smood(>=30)
+	Then:
+		Text: [Parent's Room]  Hey, it's my parents room. I remember I used to go to their room all the time when I was younger and just sleep in their bed. It's so big and fluffy! Mom and Dad would always grumble about it, but in the end they would always let me stay and read me a bedtime story! It's been years since I've done that though... Sometimes I miss it...
+	EndThen
+	Else:
+		Text: [Parent's Room] Great, it's my parents room. They're probably in there talking about what a  disappointment I am. Who needs their parents to make sure they wake up? I just mess up everything.
+	EndElse
+EndScoreCase
+EndTag
+
+
+Tag:GR
+ScoreCase: smood(>=30)
+    Then: 
+		Text: [Guest Room] It's the guest room. You know what's unfair? The fact that the guest room has a fluffier bed than mine. I should just steal the bed in there... pick it up and just carry it in my room. I'm sure noone would notice, right? Okay I should really get to school!
+    EndThen
+    Else:
+        Text: [Guest Room] The guest room... we always keep it extremely nice and neat. I wish I could be like that... nice... neat... clean. I'm just a mess instead.
+    EndElse
+EndScoreCase
+EndTag
+
+Tag:BR
+ScoreCase: smood(>=10)
+    Then: 
+		Text: [Bathroom] It's the bathroom, although I don't really need to go in there right now. 
+    EndThen
+    Else:
+        Text: [Bathroom] Sometimes, I really just want to go in there and hide. At least there I'm safe from everything... although even then it only last so long before life must come crashing down once more.
+    EndElse
+EndScoreCase
+EndTag
+
+Tag: BedRoom
+Text: [Bedroom] I wish I could go back to my room, but I really need to get to class.
+EndTag
+
